@@ -15,6 +15,6 @@ export async function buscarSuperHeroePorAtributo(atributo, valor) {
 }
 
 
-export async function obtenerSuperHeroesMayoresA100() {
-    return await SuperHeroRepository.obtenerMayoresA100();
+export async function obtenerSuperHeroesMayoresA40() {
+    return await SuperHeroRepository.obtenerMayoresA40();
 }

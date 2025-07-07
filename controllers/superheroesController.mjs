@@ -1,4 +1,4 @@
-import { obtenerSuperHeroePorId, obtenerTodosLosSuperHeroes, buscarSuperHeroePorAtributo, obtenerSuperHeroesMayoresA100 } from '../services/superHeroService.mjs';
+import { obtenerSuperHeroePorId, obtenerTodosLosSuperHeroes, buscarSuperHeroePorAtributo, obtenerSuperHeroesMayoresA40 } from '../services/superHeroService.mjs';
 
 import { renderizarSuperheroe, renderizarListaSuperheroes} from '../views/responseView.mjs';
 
@@ -48,9 +48,9 @@ export async function buscarSuperHeroePorAtributoController(req, res) {
     
 }
 
-export async function obtenerSuperHeroesMayoresA100Controller(req, res) {
+export async function obtenerSuperHeroesMayoresA40Controller(req, res) {
     try {
-        const superheroes = await obtenerSuperHeroesMayoresA100();
+        const superheroes = await obtenerSuperHeroesMayoresA40();
         if(superheroes.length === 0) {
             return res.status(404).send({ mensaje: 'No se encontraron superheroes mayores a 30 años' });
         }
